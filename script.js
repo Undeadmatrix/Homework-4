@@ -21,7 +21,11 @@ var questions = [{
 }];
 var leaderboard = [];
 var leaderboardGet = localStorage.getItem("scoreboard");
-leaderboard = leaderboardGet.split(",");
+if(leaderboardGet !== null)
+{
+    leaderboard = leaderboardGet.split(",");
+}
+
 console.log("get: " + leaderboardGet);
 //leaderboard.push(leaderboardGet);
 console.log("init array leaderboard: " + leaderboard);

@@ -42,10 +42,11 @@ function timer()
         var timer = setInterval(function(){
             document.getElementById('safeTimerDisplay').innerHTML="Time Left: " +sec;
             sec--;
-            if (sec < 0) 
+            if (sec <= 0) 
             {
                 clearInterval(timer);
                 quizOver = true;
+                endQuiz();
             }
         }, 1000);
     }
